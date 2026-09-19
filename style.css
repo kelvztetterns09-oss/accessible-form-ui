@@ -1,0 +1,186 @@
+/* ==============1=============== */
+/* global defaults  */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* =======================2================ */
+header {
+    background-color: #111827;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+header p {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+footer {
+    background-color: #111827;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+footer p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0;
+}
+/* =======================3============================== */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    flex: 1;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/* classes  */
+.field {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+input:focus {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+input[aria-invalid="true"] {
+    border-color: #dc2626;
+}
+.error-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin: 6px 0 0;
+}
+.password-wrap {
+    position: relative;
+}
+.password-wrap input {
+    padding-right: 40px;
+}
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.progress-panel {
+    max-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: conic-gradient(#111827 0% 65%, #e5e7eb 65% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.percent {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.progress-label {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.checklist {
+    list-style: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #e5e7eb;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.checklist li {
+    margin-bottom: 10px;
+}
+
+.checklist .done {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.dashboard {
+    display: flex;
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.dashboard form {
+    margin: 0;
+}
+
+.dashboard .progress-panel {
+    margin: 0;
+}

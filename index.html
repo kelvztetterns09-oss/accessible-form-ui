@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>Accesible form.org</p>
+    </header>
+    <div class="dashboard">
+        <form action="#">
+            <fieldset>
+                <legend>Enter your details</legend>
+
+                <div class="field">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="What should we call you?">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="john@doe.com" aria-invalid="true"
+                        aria-describedby="email-error">
+                    <p id="email-error" class="error-message">Email is already taken</p>
+                </div>
+
+                <div class="field">
+                    <label for="password">Enter Password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" name="password" value="xxxxxxxx">
+                        <button type="button" class="toggle-password" aria-label="Show password">👁</button>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="confirm-password" name="confirm-password" value="xxxxxxxx">
+                        <button type="button" class="toggle-password" aria-label="Show password">👁</button>
+                    </div>
+                </div>
+
+            </fieldset>
+            <button type="submit">Update Profile</button>
+        </form>
+        <aside class="progress-panel">
+            <div class="progress-circle" role="img" aria-label="Profile is 65 percent complete">
+                <span class="percent">65%</span>
+            </div>
+            <p class="progress-label">Profile Completeness</p>
+
+            <ul class="checklist">
+                <li class="done">Create Account</li>
+                <li class="done">Update Roadmap Progress</li>
+                <li class="done">Setup Public Profile</li>
+                <li>Complete your first project</li>
+                <li>Invite your Friends</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy;2026 accessible form.org</p>
+    </footer>
+</body>
+
+</html>
